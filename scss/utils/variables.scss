@@ -1,0 +1,23 @@
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 360px;
+
+$black : #000000;
+$white-grey: #f2f2f2;
+$white : #ffffff;
+$dark-red : #b30000;
+$display-panel : #005c99;
+$display-active : #ff8533;
+
+// RGB theme
+$purple: #a972cb;
+$magenta: #ef6eae; 
+$pink: #ff7f82; 
+$orange: #ffa260; 
+$yellow: #e4cb58;
+$olive: #8fc866; 
+$green: #19bc8b;
+
+.red {
+    color: $dark-red;
+}

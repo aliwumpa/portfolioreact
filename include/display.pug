@@ -1,0 +1,20 @@
+mixin display(data)
+    - var data = data || {}
+
+     .display__container--outer(id=data.id data-html=data.htmlfile data-css=data.css data-code=data.codeid)
+        .display__container--buttons
+            if data.html && data.css && data.js 
+                button.active(type="button" name="html") HTML
+                button(type="button" name="css") CSS 
+                button(type="button" name="js") JS
+            else 
+                button.active(type="button" name="html") HTML
+                button(type="button" name="js") JS
+        .display__container--code
+            if data.html && data.css && data.js
+                .display__code--box.active(style='height:' + data.height + ';' data-box="html")
+                .display__code--box(style='height:' + data.height + ';' data-box="css")
+                .display__code--box(style='height:' + data.height + ';' data-box="js")
+            else 
+                .display__code--box.active(style='height:' + data.height + ';' data-box="html")
+                .display__code--box(style='height:' + data.height + ';' data-box="js")

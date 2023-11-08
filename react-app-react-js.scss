@@ -1,0 +1,34 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.example {
+    color: #000000;
+    line-height: 35px;
+}
+
+.section {
+    &__wrapper {
+        padding: {
+            top: 10px;
+            bottom: 10px;
+            left: 15px;
+            right: 15px;
+        };
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 30px;
+
+        ol {
+            padding-inline-start: 15px;
+        }
+    }
+}
+
+$fa-font-path: "./scss/font-awesome/fonts";
+
+@import "./scss/main.scss";

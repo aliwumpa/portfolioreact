@@ -1,0 +1,94 @@
+.display {
+    &__container {
+        &--outer {
+            width: 100%;
+            padding: {
+                top: 20px;
+                bottom: 30px;
+            }
+            background-color: $display-panel;
+            border: 1px solid $display-panel;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        &--buttons {
+            display: table;
+            margin-left: 10px;
+
+            button:not(.active) {
+                &:hover {
+                    box-shadow: inset 0 0 0 calc-em(24px) $white-grey;
+                }
+            }
+
+            button {
+                position: relative;
+                cursor: pointer;
+                background-color: $white;
+                text-transform: uppercase;
+                border: 
+                {
+                    right: none medium transparent;
+                    left: none medium transparent;
+                    top: none medium transparent;
+                    bottom: 2px;
+
+                }
+                font-weight: 500;
+                padding: {
+                    top: 10px;
+                    bottom: 10px;
+                    right: 15px;
+                    left: 15px;
+                };
+                overflow: hidden;
+                border-left: 2px solid $white-grey;
+                transition: 0.25s;
+
+                &:first-child {
+                    border-top-left-radius: 5px;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 5px;
+                }
+            }
+
+            .active {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $display-active;
+                }
+            }
+        }
+        
+        &--code {
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+        }
+    }
+
+    &__code--box {
+        background-color: $black;
+        display: none;
+        color: $white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: {
+            top: 15px;
+            left: 15px;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}

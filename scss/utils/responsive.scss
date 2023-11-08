@@ -1,0 +1,35 @@
+@mixin to-lg {
+    @media screen and (min-width:($desktop + 1)) {
+        @content;
+    }
+}
+
+@mixin to-md {
+    @media screen and (min-width:($tablet + 1)) {
+        @content;
+    }
+}
+
+@mixin to-sm {
+    @media screen and (min-width:($mobile + 1)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
