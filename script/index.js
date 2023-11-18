@@ -1,6 +1,8 @@
 // import componentFunction from "./include/component.js";
 const htmlBox = $('.display__code--box');
 const buttons = $('.display__container--buttons button');
+const accordionTitle = $('.accordion--title');
+const accordionContent= $('.accordion--content');
 
 const toogleDisplayFunction = () => {
     if(buttons.length) {
@@ -85,9 +87,22 @@ const fetchDisplayFunction = () => {
     
 }
 
+const toggleAccordionFunction = () => {
+    $(accordionTitle).click((e) => {
+        $(e.currentTarget).toggleClass(`${accordionTitle}--active`);
+    
+        if($(e.currentTarget).hasClass(`${accordionTitle}--active`)) {
+            $(e.currentTarget).siblings(accordionContent).slideDown();
+        } else {
+            $(e.currentTarget).siblings(accordionContent).slideUp();
+        }
+    });
+}
+
 //invoke all function
 // componentFunction();
 fetchDisplayFunction();
 toogleDisplayFunction();
+toggleAccordionFunction();
 
 
