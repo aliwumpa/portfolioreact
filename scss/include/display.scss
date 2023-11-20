@@ -43,11 +43,14 @@
                     left: 15px;
                 };
                 overflow: hidden;
-                border-left: 2px solid $white-grey;
                 transition: 0.25s;
 
                 &:first-child {
                     border-top-left-radius: 5px;
+                }
+
+                &:not(:first-child) {
+                    border-left: 2px solid $white-grey;
                 }
 
                 &:last-child {
@@ -85,10 +88,12 @@
         padding: {
             top: 15px;
             left: 15px;
+            bottom: 15px;
         }
 
         &.active {
             display: block;
+            overflow: auto;
         }
     }
 }

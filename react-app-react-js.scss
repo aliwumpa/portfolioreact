@@ -1,5 +1,8 @@
+@import "./scss/utils/variables.scss";
+
 body {
     font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to left bottom, $gradient-darkblue, $gradient-blue, $gradient-darkgreen, $gradient-green, $gradient-limegreen);
 }
 
 button {
@@ -22,6 +25,7 @@ button {
         border: 1px solid black;
         border-radius: 15px;
         margin-bottom: 30px;
+        background-color: $white;
 
         ol {
             padding-inline-start: 15px;

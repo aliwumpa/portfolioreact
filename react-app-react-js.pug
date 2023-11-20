@@ -8,7 +8,7 @@ html(lang="en")
     body
         main
             h1 Scribble App Learn React
-            section.section__wrapper
+            section.section__wrapper(class="animate__animated animate__fadeInDown")
                 .accordion--title
                     h2 Create an element using Javascript Vanilla
                     span.fa.fa-caret-down
@@ -19,14 +19,14 @@ html(lang="en")
                         "css": false,
                         "js": true,
                         "height":"300px",
-                        "htmlfile":"code1",
+                        "htmlfile":"code1"
                     })
                     .result__container--outer 
                         h3 Result
-                        #app
+                        .result__container--outer-render
 
 
-            section.section__wrapper
+            section.section__wrapper(class="animate__animated animate__fadeInDown animate__delay-1s")
                 .accordion--title
                     h2 Create an element using React
                     span.fa.fa-caret-down
@@ -37,19 +37,17 @@ html(lang="en")
                         "css": false,
                         "js": true,
                         "height":"300px",
-                        "htmlfile":"code2",
+                        "htmlfile":"code2"
                     })
                     .result__container--outer 
                         h3 Result
-                        #root
+                        .result__container--outer-render
 
-            section.section__wrapper 
+            section.section__wrapper(class="animate__animated animate__fadeIn animate__delay-2s")
                 h2 3 rules of using JSX for creating element in React
                 ol 
                     li 
-                        p Only return 1 element (if you want to create multiple element you should use pair enclosing )
-                        //- div
-                            //- iframe(height="700" style="width: 100%;" scrolling="no" title="Embedded CodePen" src="https://codepen.io/Ali-Wumpa-the-solid/embed/mdvdBEK?default-tab=html%2Cresult" frameborder="no" allowtransparency="true" allowfullscreen="true")
+                        p Only return 1 element (if you want to create multiple element you should use pair enclosing ) for example :
                         +display({
                             "id":"display3",
                             "html": true,
@@ -57,7 +55,12 @@ html(lang="en")
                             "js": true,
                             "height":"700px",
                             "codeid":"root2",
+                            "htmlfile":"code3"
                         })
+
+                        .result__container--outer 
+                            h3 Result
+                            .result__container--outer-render
                     li 
                         p 
                           | Always close all element tag, if you forget to close element tag it will give an error 

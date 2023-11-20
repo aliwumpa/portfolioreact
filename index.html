@@ -8,15 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap">
+      <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
     </noscript>
     <link rel="stylesheet" type="text/css" href="./react-app-react-js.css">
   </head>
   <body>
     <main>
       <h1>Scribble App Learn React</h1>
-      <section class="section__wrapper">
+      <section class="section__wrapper animate__animated animate__fadeInDown">
         <div class="accordion--title">
           <h2>Create an element using Javascript Vanilla</h2><span class="fa fa-caret-down"></span>
         </div>
@@ -33,11 +35,11 @@
             </div>
           <div class="result__container--outer"> 
             <h3>Result</h3>
-            <div id="app"></div>
+            <div class="result__container--outer-render"></div>
           </div>
         </div>
       </section>
-      <section class="section__wrapper">
+      <section class="section__wrapper animate__animated animate__fadeInDown animate__delay-1s">
         <div class="accordion--title">
           <h2>Create an element using React</h2><span class="fa fa-caret-down"></span>
         </div>
@@ -54,16 +56,16 @@
             </div>
           <div class="result__container--outer"> 
             <h3>Result</h3>
-            <div id="root"></div>
+            <div class="result__container--outer-render"></div>
           </div>
         </div>
       </section>
-      <section class="section__wrapper"> 
+      <section class="section__wrapper animate__animated animate__fadeIn animate__delay-2s">
         <h2>3 rules of using JSX for creating element in React</h2>
         <ol> 
           <li> 
-            <p>Only return 1 element (if you want to create multiple element you should use pair enclosing )</p>
-              <div class="display__container--outer" id="display3" data-css data-code="root2">
+            <p>Only return 1 element (if you want to create multiple element you should use pair enclosing ) for example :</p>
+              <div class="display__container--outer" id="display3" data-html="code3" data-css data-code="root2">
                 <div class="display__container--buttons">
                   <button class="active" type="button" name="html">HTML</button>
                   <button type="button" name="css">CSS </button>
@@ -75,6 +77,10 @@
                   <div class="display__code--box" style="height:700px;" data-box="js"></div>
                 </div>
               </div>
+            <div class="result__container--outer"> 
+              <h3>Result</h3>
+              <div class="result__container--outer-render"></div>
+            </div>
           </li>
           <li> 
             <p>
