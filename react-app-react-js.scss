@@ -2,7 +2,18 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(to left bottom, $gradient-darkblue, $gradient-blue, $gradient-darkgreen, $gradient-green, $gradient-limegreen);
+    background-image: linear-gradient(to left bottom, $gradient-white, $gradient-lesspink, $gradient-mediumpink, $gradient-highpink, $gradient-sakura);
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 button {
@@ -14,23 +25,9 @@ button {
     line-height: 35px;
 }
 
-.section {
-    &__wrapper {
-        padding: {
-            top: 10px;
-            bottom: 10px;
-            left: 15px;
-            right: 15px;
-        };
-        border: 1px solid black;
-        border-radius: 15px;
-        margin-bottom: 30px;
-        background-color: $white;
-
-        ol {
-            padding-inline-start: 15px;
-        }
-    }
+.notes__wrapper {
+    display: none;
+    padding: 15px;
 }
 
 $fa-font-path: "./scss/font-awesome/fonts";

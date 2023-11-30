@@ -3,6 +3,82 @@
 @import "./utils/function.scss";
 @import "./include/display.scss";
 
+.section {
+    &__wrapper {
+        padding: {
+            top: 10px;
+            bottom: 10px;
+            left: 15px;
+            right: 15px;
+        };
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        background-color: $white;
+
+        ol {
+            padding-inline-start: 15px;
+        }
+
+        &--title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 860px;
+
+            @include lg {
+                max-width: none;
+                padding: {
+                    right: 15px;
+                    left: 15px;
+                };
+                width: calc(80%);
+            }
+
+            h1 {
+                margin-top: 0;
+                // text-align: center;
+                font-size: 42px;
+                font-style: italic;
+            }
+
+            p {
+                line-height: 32px;
+                margin-bottom: 25px;
+            }
+
+            button {
+                border: none medium transparent;
+                background-color: transparent;
+                outline: none;
+                cursor: pointer;
+                text-decoration: underline;
+                padding: {
+                    left: 0;
+                    right: 0;
+                }
+
+                &:hover {
+                    color: $gradient-blue;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                span {
+                    font-size: 16px;
+
+                    &:nth-child(2) {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .accordion {
     &--title {
         display: flex;
@@ -68,6 +144,7 @@
                 padding: {
                     top: 10px;
                     left: 15px;
+                    right: 15px;
                     bottom: 10px;
                 }
                 margin: {

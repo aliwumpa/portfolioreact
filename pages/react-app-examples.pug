@@ -1,0 +1,68 @@
+mixin react-app-examples()
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
+        .accordion--title
+            h2 Create an element using Javascript Vanilla
+            span.fa.fa-caret-down
+        .accordion--content
+            +display({
+                "id":"display1",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"300px",
+                "htmlfile":"code1"
+            })
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render
+
+
+    section.section__wrapper(class="animate__animated animate__fadeInDown animate__delay-1s")
+        .accordion--title
+            h2 Create an element using React
+            span.fa.fa-caret-down
+        .accordion--content
+            +display({
+                "id":"display2",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"300px",
+                "htmlfile":"code2"
+            })
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render
+
+    section.section__wrapper(class="animate__animated animate__fadeIn animate__delay-2s")
+        .accordion--title
+            h2 3 rules of using JSX for creating element in React
+            span.fa.fa-caret-down
+        .accordion--content
+            ol 
+                li 
+                    p Only return 1 element (if you want to create multiple element you should use pair enclosing ) for example :
+                    +display({
+                        "id":"display3",
+                        "html": true,
+                        "css": true,
+                        "js": true,
+                        "height":"700px",
+                        "codeid":"root2",
+                        "htmlfile":"code3"
+                    })
+
+                    .result__container--outer 
+                        h3 Result
+                        .result__container--outer-render
+                li 
+                    p 
+                        | Always close all element tag, if you forget to close element tag it will give an error 
+                        span.red "Unterminated JSX contents"
+                li 
+                    p 
+                        | Use camelCase for attribute element for example :
+                        br
+                        span.example Instead using #[strong class] attribute in HTML, in JSX we are using #[strong className] 
+                        br
+                        span.example Instead using #[strong onclick] attribute in HTML, in JSX we are using #[strong onClick]

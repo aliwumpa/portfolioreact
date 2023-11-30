@@ -4,12 +4,12 @@ mixin display(data)
      .display__container--outer(id=data.id data-html=data.htmlfile data-css=data.css data-code=data.codeid)
         .display__container--buttons
             if data.html && data.css && data.js 
-                button.active(type="button" name="html") HTML
-                button(type="button" name="css") CSS 
-                button(type="button" name="js") JS
+                button.active(type="button" name="html" aria-label="toggle-button") HTML
+                button(type="button" name="css" aria-label="toggle-button") CSS 
+                button(type="button" name="js" aria-label="toggle-button") JS
             else 
-                button.active(type="button" name="html") HTML
-                button(type="button" name="js") JS
+                button.active(type="button" name="html" aria-label="toggle-button") HTML
+                button(type="button" name="js" aria-label="toggle-button") JS
         .display__container--code
             if data.html && data.css && data.js
                 .display__code--box.active(style='height:' + data.height + ';' data-box="html")
