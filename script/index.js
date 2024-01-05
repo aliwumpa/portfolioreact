@@ -92,15 +92,26 @@ const fetchDisplayFunction = () => {
                             const scriptInnerHtml = element.innerHTML;
                             if (tagName === 'script') {            
                                 for (let i = 0; i < scriptInnerHtml.length; i++) {
-                                    const char = scriptInnerHtml[i];
+                                    let char = scriptInnerHtml[i];
+
+                                    if (char === '<') {
+                                        char = '&lt';
+                                    }
+
+                                    if (char === '>') {
+                                        char = '&gt';
+                                    }
+
                                     formattedScriptInnerHtml += char;
                     
                                     if (char === ';') {
                                         formattedScriptInnerHtml += '<br />';
                                     }
                                 }
+
+                                let temp = formattedScriptInnerHtml.replace(/\b(return|function|root)\b/g, '<br>$1');
                     
-                                scriptString += `<${highlightedElement} ${attributes}><br /><br />${formattedScriptInnerHtml}<br /><br />&lt/${highlightedElement}>`;
+                                scriptString += `<${highlightedElement} ${attributes}><br /><br />${temp}<br /><br />&lt/${highlightedElement}>`;
         
                             } else {
                                 if (isSelfClosing) {
@@ -146,14 +157,17 @@ const toggleAccordionFunction = () => {
 const notesFunction = () => {
     if($('.see-notes--button').length) {
         $('.see-notes--button').click(() => {
-            $('.section__wrapper--title').fadeOut();
+            $('.section__wrapper--title').fadeOut('slow');
             $('#notes__section').show();
         });
     }
 }
 
 //invoke all function
+$(document).ready(() => {
+    notesFunction();
+});
+
 fetchDisplayFunction();
 toogleDisplayFunction();
 toggleAccordionFunction();
-notesFunction();

@@ -1,0 +1,55 @@
+
+<div id="root5"></div>
+<script type="text/babel">
+  const container = document.getElementById('root5');
+  const root = ReactDOM.createRoot(container);
+  const items = ['item 1', 'item 2', 'item 3'];
+  const items2 = 
+      [
+          {
+              name: 'item 4',
+              key: 4
+          }, 
+          {
+              name: 'item 5',
+              key: 5
+          }, 
+          { 
+              name: 'item 6',
+              key: 6
+          }
+      ];
+  let listItems = [];
+  
+  function ListItemMap() {
+      return (
+          <ol>
+              {items.map((item, index) => (
+                  <li key={index}>{item}</li>
+              ))}
+          </ol>
+      );
+  }
+  
+  function ListItemEach() {
+  
+      items2.forEach(({ name, key }) => {
+          listItems.push(<li key={key}>{name}</li>)
+      })
+  
+      return (
+          <ol>
+              {listItems}
+          </ol>
+      );
+  }
+  
+  root.render(
+      <>
+          <p>Using method <strong>map</strong></p>
+          <ListItemMap />
+          <p>Using method <strong>forEach</strong></p>
+          <ListItemEach />
+      </>
+  );
+</script>

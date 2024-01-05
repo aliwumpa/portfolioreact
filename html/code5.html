@@ -1,0 +1,28 @@
+
+<div id="root4"></div>
+<script type="text/babel">
+  const container = document.getElementById('root4');
+  const root = ReactDOM.createRoot(container);
+  
+  function Header(props) {
+      return (<h1>This is {props.headerVal} with different props</h1>);
+  }
+  
+  function HeaderDestructuring({headerVal}) {
+      return (<h1>This is {headerVal ? headerVal : 'props value 2 destructuring'} with different props</h1>);
+  }
+  
+  root.render(
+      <>
+          <Header headerVal="props value 1" />
+          <Header headerVal="props value 2" />
+  
+          <p> or you can use destructuring method when call the object's item <strong>headerVal</strong>.For example :</p>
+  
+          <HeaderDestructuring headerVal="props value 1 destructuring" />
+          <HeaderDestructuring />
+  
+          <p> on above case, i use destructuring <strong>&#123;headerVal&#125; </strong> instead call object props on argument's function</p>
+      </>
+  );
+</script>

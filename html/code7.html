@@ -1,0 +1,23 @@
+
+<div id="root"></div>
+<script type="text/babel">
+  const container = document.getElementById('root');
+  const root = ReactDOM.createRoot(container);
+  
+  const [number, setNumber] = React.useState(0);
+  
+  function handleClick() {
+      setNumber(number + 1);
+  }
+  
+  root.render(
+      <>
+          <p>On this example, number is a State meanwhile the setNumber is a State Updater function to.</p>
+          <br />
+          <p>And lastly the React.useState is the hooks to change initial value of number.</p>
+          <br />
+          <p>We can set initial value of number in args of hooks.</p>
+          <button onClick={handleClick}>the value of number is ({number})</button>
+      </>
+  );
+</script>

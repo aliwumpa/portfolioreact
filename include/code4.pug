@@ -1,0 +1,34 @@
+#root3
+script(type="text/babel").
+    const container = document.getElementById('root3');
+    const root = ReactDOM.createRoot(container);
+
+    function Header() {
+        return (<h1>This is header nested elements</h1>);
+    }
+
+    function Body() {
+        return (<p>This is body of nested elements</p>);
+    }
+
+    function Footer() {
+        return (
+            <div>
+                <p>This is footer of nested elements</p>
+                <p>Copyright @aliwumpa.github.io </p>
+            </div>
+        );
+    }
+
+    function Homepage() {
+        return (
+            <>
+                <Header />
+                <Body />
+                <Footer />
+            </>
+        );
+    }
+    root.render(
+        <Homepage />
+    );

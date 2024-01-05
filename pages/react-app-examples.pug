@@ -16,8 +16,7 @@ mixin react-app-examples()
                 h3 Result
                 .result__container--outer-render
 
-
-    section.section__wrapper(class="animate__animated animate__fadeInDown animate__delay-1s")
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
         .accordion--title
             h2 Create an element using React
             span.fa.fa-caret-down
@@ -33,8 +32,25 @@ mixin react-app-examples()
             .result__container--outer 
                 h3 Result
                 .result__container--outer-render
+            
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
+        .accordion--title
+            h2 Create a nested element using React
+            span.fa.fa-caret-down
+        .accordion--content
+            +display({
+                "id":"display4",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"500px",
+                "htmlfile":"code4"
+            })
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render
 
-    section.section__wrapper(class="animate__animated animate__fadeIn animate__delay-2s")
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
         .accordion--title
             h2 3 rules of using JSX for creating element in React
             span.fa.fa-caret-down
@@ -47,7 +63,7 @@ mixin react-app-examples()
                         "html": true,
                         "css": true,
                         "js": true,
-                        "height":"700px",
+                        "height":"400px",
                         "codeid":"root2",
                         "htmlfile":"code3"
                     })
@@ -66,3 +82,44 @@ mixin react-app-examples()
                         span.example Instead using #[strong class] attribute in HTML, in JSX we are using #[strong className] 
                         br
                         span.example Instead using #[strong onclick] attribute in HTML, in JSX we are using #[strong onClick]
+                        
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
+        .accordion--title 
+            h2 How to make reusable component with React 
+            span.fa.fa-caret-down
+        .accordion--content 
+            p In react we can reuse component that we already created but <strong>we can assign different data to element using props</strong>. For example :
+            +display({
+                "id":"display5",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"600px",
+                "htmlfile":"code5"
+            })
+
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render
+        
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
+        .accordion--title 
+            h2 Looping with React 
+            span.fa.fa-caret-down
+        .accordion--content 
+            p 
+                | Looping method is very important in case we want to show a lot of data.
+                | In this section we can use <strong>map or forEach</strong> to loop item in array. 
+                | For example :
+            +display({
+                "id":"display6",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"600px",
+                "htmlfile":"code6"
+            })
+
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render
