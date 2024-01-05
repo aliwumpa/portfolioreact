@@ -123,3 +123,26 @@ mixin react-app-examples()
             .result__container--outer 
                 h3 Result
                 .result__container--outer-render
+
+    section.section__wrapper(class="animate__animated animate__fadeInDown")
+        .accordion--title 
+            h2 Interactiviy with State and Hooks
+            span.fa.fa-caret-down
+        .accordion--content 
+            p 
+                | In React we can manipulate data when interactivity is happen on element such as Clicking Button, Hover etc. 
+                | The data that always change we called it <strong>State</strong>. 
+                | Meanwhile the functions tothat let you “hook into” React state and lifecycle features from function components we called it <strong>Hooks</strong>.
+                | For example :
+            +display({
+                "id":"display7",
+                "html": true,
+                "css": false,
+                "js": true,
+                "height":"600px",
+                "htmlfile":"code7"
+            })
+
+            .result__container--outer 
+                h3 Result
+                .result__container--outer-render

@@ -21,11 +21,18 @@ script(type="text/babel").
     }
 
     function Homepage() {
+        const [number, setNumber] = React.useState(0);
+
+        function handleClick() {
+            setNumber(number + 1);
+        }
+
         return (
             <>
                 <Header />
                 <Body />
                 <Footer />
+                <button onClick={handleClick}>the value of number is ({number})</button>
             </>
         );
     }
